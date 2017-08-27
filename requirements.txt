@@ -1,0 +1,4 @@
+mysql_connector==2.1.4
+gitpython==2.1.5
+influxdb==4.1.1
+configparser==3.5.0

@@ -1,0 +1,21 @@
+#folder
+target/
+.vagrant/
+
+#fixed file
+.exe
+.log
+.DS_Store
+Thumbs.db
+*.iml
+*.ipr
+*.iws
+*.tar.gz
+*.bak
+.idea
+*.log
+*.swp
+*.swo
+*.pyc
+*.pyo
+*.zip

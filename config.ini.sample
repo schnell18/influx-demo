@@ -1,0 +1,14 @@
+[influxdb]
+user=pajk
+password=abc
+host=192.168.11.20
+port=8086
+database=mydb
+
+[gitstat]
+measurement=git_stat_rel
+branch=origin/master
+
+; [gitstat]
+; measurement=git_stat_dev
+; branch=origin/develop

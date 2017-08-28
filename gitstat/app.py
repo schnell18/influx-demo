@@ -20,7 +20,8 @@ class GitStatLoader:
         self.branch = gitstat_cfg['branch']
         self.measurement = gitstat_cfg['measurement']
         self.influx = InfluxDBClient(host, port, user, password, dbname)
-
+        rp = influx_cfg.get('retentionPolicy', None)
+        self.retention_policy = rp if rp else None
 
     def load(self, path):
         print("Start load stat data for %s" % path)
@@ -34,6 +35,7 @@ class GitStatLoader:
     def send_data(self, recs):
         self.influx.write_points(
             [self.make_line_point(r) for r in recs],
+            retention_policy=self.retention_policy,
             protocol='line'
         )
 
